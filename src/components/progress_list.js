@@ -12,6 +12,19 @@ class ProgressList extends Component {
     
 
     render(){
+        const progressItems = this.props.bars.map((bar, index) => {
+            return <ProgressBar key={index} limit={this.state.limit} percent={bar} />
+        });
+
+        return (
+            <div>
+                <ul className="progressbar-list">
+                     {progressItems} 
+                </ul>
+                <ProgressControl 
+                    bars={this.props.bars} buttons={this.props.buttons} />
+            </div>
+        )
     }
 };
 
