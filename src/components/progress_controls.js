@@ -6,7 +6,12 @@ class ProgressControl extends Component {
         super(props);
 
         this.state = {selected_bar:0};
+        this.handleChange = this.handleChange.bind(this)
     }
+    
+    handleChange(event) {
+        this.setState({selected_bar: event.target.value});
+    };
 
     render(){
         
@@ -26,7 +31,7 @@ class ProgressControl extends Component {
 
         return (
             <div className="progressbar-controls">
-                <select value={this.state.selected_bar}>
+                <select onChange={this.handleChange} value={this.state.selected_bar}>
                     {progressBars}
                 </select>
                     {progressButtons}
