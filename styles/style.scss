@@ -23,3 +23,35 @@ html{
     padding:0;
     margin: 0;
 }
+.progressbar-controls {
+    
+    position: relative;
+    padding:15px;
+
+    select{
+        padding: 5px;
+        border-radius: 3px;
+        margin-right: 3px;
+        outline: none;
+    }
+
+    button {
+        padding: 0.4em 0.6em;
+        margin: 5px 2px;
+        background-color: $BUTTON_COLOR;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 2px;
+    }
+
+    button:hover {
+        background-color: $BUTTON_COLOR_HOVER;
+        color: white;
+        cursor: pointer;
+    }
+}
+
