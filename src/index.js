@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import style from '../styles/style.scss';
 
+import ProgressList from './components/progress_list'
 import 'whatwg-fetch'
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             
             <div>
                 <h1>Front End Assignment - Progress Bars</h1>
+                <ProgressList bars={this.state.bars} buttons={this.state.buttons} limit={this.state.limit}/>
             </div>
         );
     }
