@@ -11,8 +11,8 @@ class ProgressList extends Component {
     }
     updateProgress(index, value){
         const bars = this.props.bars
-        if((Math.sign(value) == 1)) bars[index] += Math.floor((value/this.state.limit)*100)
-        else bars[index] -= -Math.floor((value/this.state.limit)*100)
+        if((Math.sign(value) == 1)) bars[index] += Math.round((value/this.state.limit)*100)
+        else bars[index] -= -Math.round((value/this.state.limit)*100)
 
         if (bars[index] < 0) bars[index] = 0
 
